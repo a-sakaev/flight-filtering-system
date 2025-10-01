@@ -7,7 +7,7 @@ public class DepartureBeforeNowFilter implements FlightFilter {
     @Override
     public boolean test(Flight flight) {
         if (flight == null) {
-            throw new IllegalArgumentException("Некорректные данные перелета");
+            return false;
         }
         List<Segment> segments = flight.getSegments();
 
